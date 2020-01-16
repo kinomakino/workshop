@@ -24,3 +24,7 @@ https://github.com/AlessandroZ/LaZagne
 auditar el acceso al fichero.
 
 sysmon: ejemplos buscar dns... procesos padre e hijos con word...
+
+
+comillas dobles
+https://gallery.technet.microsoft.com/scriptcenter/Windows-Unquoted-Service-190f0341
