@@ -31,4 +31,6 @@ http://kinomakino.blogspot.com/2019/03/deteccion-de-lazagne-easy-baby.html
 5.- Genera un diccionaro con 5 claves. Genera un usuario en AD con una clave que esté en esa lista. Sigue el siguiente proceso:
 http://kinomakino.blogspot.com/2020/01/blue-team-auto-fuerza-bruteate-active.html
 
-6.- 
+6.-  Hardening para Services Hijacking.
+http://kinomakino.blogspot.com/2020/01/t1034-enumera-y-soluciona-el-problema.html
+
