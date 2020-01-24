@@ -2,6 +2,7 @@
 https://medium.com/@kamran.bilgrami/ethical-hacking-lessons-building-free-active-directory-lab-in-azure-6c67a7eddd7f
 
 2.- Probar ataque Mimikatz:
+
 2.1.- Ejecutar mimikatz
 http://blog.gentilkiwi.com/mimikatz
 
