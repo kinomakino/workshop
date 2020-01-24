@@ -1,3 +1,4 @@
+
 1.- Montar Active directory de ejemplo:
 https://medium.com/@kamran.bilgrami/ethical-hacking-lessons-building-free-active-directory-lab-in-azure-6c67a7eddd7f
 
@@ -79,7 +80,12 @@ Audit ‘Security State Change’ is set to ‘Success’
 Audit ‘Security System Extension’ is set to ‘Success and Failure’
 Audit ‘System Integrity’ is set to ‘Success and Failure’
 
-8.- EJERCICIOS DEL TOP:
+8.- CONFIGURAR POWERSHELL TRANSCRIPT CON GPO:
+
+https://sid-500.com/2017/11/07/powershell-enabling-transcription-logging-by-using-group-policy/
+
+
+10.- EJERCICIOS DEL TOP:
 
 1,5,11,14 (http://kinomakino.blogspot.com/2016/08/vete-al-infierno-dns-sinkhole-127001.html)
 18,
