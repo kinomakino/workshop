@@ -35,3 +35,52 @@ http://kinomakino.blogspot.com/2020/01/blue-team-auto-fuerza-bruteate-active.htm
 6.-  Hardening para Services Hijacking.
 http://kinomakino.blogspot.com/2020/01/t1034-enumera-y-soluciona-el-problema.html
 
+7.- Aumento de logs: 
+
+Computer Configuration -> Policies -Windows Settings -> Security Settings -> Advanced Audit Policy Configuration
+
+Account Logon
+Ensure ‘Audit Credential Validation’ is set to ‘Success and Failure’
+
+Account Management
+Audit ‘Application Group Management’ is set to ‘Success and Failure’
+Audit ‘Computer Account Management’ is set to ‘Success and Failure’
+Audit ‘Other Account Management Events’ is set to ‘Success and Failure’
+Audit ‘Security Group Management’ is set to ‘Success and Failure’
+Audit ‘User Account Management’ is set to ‘Success and Failure’
+
+Detailed Tracking
+Audit ‘PNP Activity’ is set to ‘Success’
+Audit ‘Process Creation’ is set to ‘Success’
+
+Logon/Logoff
+Audit ‘Account Lockout’ is set to ‘Success and Failure’
+Audit ‘Group Membership’ is set to ‘Success’
+Audit ‘Logoff’ is set to ‘Success’
+Audit ‘Logon’ is set to ‘Success and Failure’
+Audit ‘Other Logon/Logoff Events’ is set to ‘Success and Failure’
+Audit ‘Special Logon’ is set to ‘Success’
+
+Object Access
+Audit ‘Removable Storage’ is set to ‘Success and Failure’
+
+Policy Change
+Audit ‘Audit Policy Change’ is set to ‘Success and Failure’
+Audit ‘Authentication Policy Change’ is set to ‘Success’
+Audit ‘Authorization Policy Change’ is set to ‘Success’
+
+Privilege Use
+Audit ‘Sensitive Privilege Use’ is set to ‘Success and Failure’
+
+System
+Audit ‘IPsec Driver’ is set to ‘Success and Failure’
+Audit’ Other System Events’ is set to ‘Success and Failure’
+Audit ‘Security State Change’ is set to ‘Success’
+Audit ‘Security System Extension’ is set to ‘Success and Failure’
+Audit ‘System Integrity’ is set to ‘Success and Failure’
+
+8.- EJERCICIOS DEL TOP:
+
+1,5,11,14 (http://kinomakino.blogspot.com/2016/08/vete-al-infierno-dns-sinkhole-127001.html)
+18,
+EJECUTAR: https://github.com/silverhack/voyeur
