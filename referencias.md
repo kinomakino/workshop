@@ -28,3 +28,7 @@ sysmon: ejemplos buscar dns... procesos padre e hijos con word...
 
 comillas dobles
 https://gallery.technet.microsoft.com/scriptcenter/Windows-Unquoted-Service-190f0341
+
+Bloodhound
+
+https://github.com/davidprowe/BadBlood
