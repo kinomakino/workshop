@@ -1,0 +1,141 @@
+Top 25 Active Directory Security Best Practices
+
+1. Clean up the Domain Admins Group
+
+Enable-ADOptionalFeature ‘Privileged Access Management Feature’ -Scope ForestOrConfigurationSet -Target inseguros.local
+Add-ADGroupMember -Identity ‘administradores de dominio’ -Members ‘consultor’ -MemberTimeToLive (New-TimeSpan -Days 5)
+
+2. Use at Least Two Accounts (Regular and Admin Account)
+3. Secure The Domain Administrator account
+
+https://docs.microsoft.com/es-es/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models
+
+4. Disable the Local Administrator Account (on all computers)
+5. Use Local Administrator Password Solution (LAPS)
+
+https://www.microsoft.com/en-us/download/details.aspx?id=46899
+
+6. Use a Secure Admin Workstation (SAW)
+
+https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/privileged-access-workstations
+
+7. Enable Audit policy Settings with Group Policy
+
+Computer Configuration -> Policies -Windows Settings -> Security Settings -> Advanced Audit Policy Configuration
+
+Account Logon
+Ensure ‘Audit Credential Validation’ is set to ‘Success and Failure’
+
+Account Management
+Audit ‘Application Group Management’ is set to ‘Success and Failure’
+Audit ‘Computer Account Management’ is set to ‘Success and Failure’
+Audit ‘Other Account Management Events’ is set to ‘Success and Failure’
+Audit ‘Security Group Management’ is set to ‘Success and Failure’
+Audit ‘User Account Management’ is set to ‘Success and Failure’
+
+Detailed Tracking
+Audit ‘PNP Activity’ is set to ‘Success’
+Audit ‘Process Creation’ is set to ‘Success’
+
+Logon/Logoff
+Audit ‘Account Lockout’ is set to ‘Success and Failure’
+Audit ‘Group Membership’ is set to ‘Success’
+Audit ‘Logoff’ is set to ‘Success’
+Audit ‘Logon’ is set to ‘Success and Failure’
+Audit ‘Other Logon/Logoff Events’ is set to ‘Success and Failure’
+Audit ‘Special Logon’ is set to ‘Success’
+
+Object Access
+Audit ‘Removable Storage’ is set to ‘Success and Failure’
+
+Policy Change
+Audit ‘Audit Policy Change’ is set to ‘Success and Failure’
+Audit ‘Authentication Policy Change’ is set to ‘Success’
+Audit ‘Authorization Policy Change’ is set to ‘Success’
+
+Privilege Use
+Audit ‘Sensitive Privilege Use’ is set to ‘Success and Failure’
+
+System
+Audit ‘IPsec Driver’ is set to ‘Success and Failure’
+Audit’ Other System Events’ is set to ‘Success and Failure’
+Audit ‘Security State Change’ is set to ‘Success’
+Audit ‘Security System Extension’ is set to ‘Success and Failure’
+Audit ‘System Integrity’ is set to ‘Success and Failure’
+
+8. Monitor Active Directory Events for Signs of Compromise
+9. Password Complexity Sucks (Use Passphrases Instead)
+10. Use Descriptive Security Group Names
+11. Cleanup Old Active Directory User & Computer Accounts
+
+get-aduser -filter * -properties lastlogondate | Where-Object {$_.enabled -eq "true"-and $_.lastlogondate -lt (get-date).adddays(-90)} | Export-csv -path c:\kinomakino\last.csv
+
+https://activedirectorypro.com/find-remove-old-computer-accounts-active-directory/
+
+
+12. Do NOT Install Additional Software or Roles on Domain Controllers
+13. Continues Patch Management & Vulnerability Scanning
+
+https://docs.microsoft.com/en-us/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus
+
+14. Use DNS Services to Block Malicious Domains
+15. Run Critical Infrastructure on latest Windows Operating System
+16. Use Two Factor Authentication for Remote Access
+17. Monitor DHCP Logs for Connected Devices
+18. Monitor DNS Logs for Security Threats
+
+Step 1: Open the DNS Management Console
+
+Step 2: Right click and select properties
+
+Step 3: Click Debug Logging Tab
+
+Step 4: Check the box “Log packets for debugging
+
+19. Use Latest ADFS and Azure Security Features
+
+https://cloudblogs.microsoft.com/enterprisemobility/2018/03/05/azure-ad-and-adfs-best-practices-defending-against-password-spray-attacks/
+
+20. Use Office 365 Secure Score
+21. Plan for Compromise ( Have a recovery plan)
+
+https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf
+
+22. Document Delegation to Active Directory
+23. Lock Down Service Accounts
+
+borrar servicios innecesarios en server
+
+https://docs.microsoft.com/es-es/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
+
+Use long Strong passwords
+Give access to only what is needed
+Try to avoid granting local administrator rights
+Do not put in Domain Admins
+Deny logon locally
+Deny logon as a batch
+
+
+24. Disable SMBv1
+
+25. Use Security Baselines and Benchmarks
+
+microsoft toolkit
+
+https://kinomakino.blogspot.com/2019/10/microsoft-security-compliance-kit.html
+
+https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-412EF981-D4F1-430B-9D09-A4679C2D04E7.html
+
+https://www.ccn-cert.cni.es/pdf/guias/series-ccn-stic/guias-de-acceso-publico-ccn-stic/4050-ccn-stic-599a19-seguridad-en-windows-10-cliente-miembro-de-dominio-anexos.html 
+https://www.ccn-cert.cni.es/pdf/guias/series-ccn-stic/guias-de-acceso-publico-ccn-stic/3248-ccn-stic-574-ens-anexo-a/file.html
+https://www.ccn-cert.cni.es/pdf/guias/series-ccn-stic/guias-de-acceso-publico-ccn-stic/3233-ccn-stic-573-ens-anexo-a/file.html
+https://www.ccn-cert.cni.es/pdf/guias/series-ccn-stic/guias-de-acceso-publico-ccn-stic/3182-ccn-stic-570a-ens-anexo-a/file.html
+
+
+
+ANÁLISIS DEL DIRECTORIO 
+
+https://github.com/silverhack/voyeur
+
+
+http://kinomakino.blogspot.com/2016/04/como-evitar-el-cifrado-por-ransomware_21.html
