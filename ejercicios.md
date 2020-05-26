@@ -12,6 +12,9 @@ http://blog.gentilkiwi.com/mimikatz
 The reg key to disable wdigest in earlier operating systems is: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\SecurityProviders\WDigest creating a DWORD ‘UseLogonCredential’ setting the vlaue to 0 disables it. 1 enables it.
 
 2.3.- Volver a comprobar.
+
+2.3.2.- crackear ntlm http://kinomakino.blogspot.com/2017/04/cracking-ntlm-hashes-con-azure-gpu-por.html
+
 2.4.- Auditar cambios en la ramas de registro:
 http://kinomakino.blogspot.com/2020/01/auditar-cambios-en-el-registro-sin.html
 3.- Instalar BloodHound en Kali linux:
@@ -87,6 +90,4 @@ https://sid-500.com/2017/11/07/powershell-enabling-transcription-logging-by-usin
 
 10.- EJERCICIOS DEL TOP:
 
-1,5,11,14 (http://kinomakino.blogspot.com/2016/08/vete-al-infierno-dns-sinkhole-127001.html)
-18,
-EJECUTAR: https://github.com/silverhack/voyeur
+
