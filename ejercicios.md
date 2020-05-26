@@ -9,6 +9,15 @@ FICHERO MIMI
 
 2.3.2.- crackear ntlm http://kinomakino.blogspot.com/2017/04/cracking-ntlm-hashes-con-azure-gpu-por.html
 
+Username : administrador2
+         * NTLM     : 5074a6992c63485460928c1c9fdad6b5
+         * Username : administrador2
+         * Password : Patatasfritas2020!!!
+
+
+
+
+
 2.4.- Auditar cambios en la ramas de registro:
 http://kinomakino.blogspot.com/2020/01/auditar-cambios-en-el-registro-sin.html
 3.- Instalar BloodHound en Kali linux:
