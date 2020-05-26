@@ -5,14 +5,7 @@ https://medium.com/@kamran.bilgrami/ethical-hacking-lessons-building-free-active
 
 2.- Probar ataque Mimikatz:
 
-2.1.- Ejecutar mimikatz
-http://blog.gentilkiwi.com/mimikatz
-
-2.2.- Activar Wdigest
-
-The reg key to disable wdigest in earlier operating systems is: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\SecurityProviders\WDigest creating a DWORD ‘UseLogonCredential’ setting the vlaue to 0 disables it. 1 enables it.
-
-2.3.- Volver a comprobar.
+FICHERO MIMI
 
 2.3.2.- crackear ntlm http://kinomakino.blogspot.com/2017/04/cracking-ntlm-hashes-con-azure-gpu-por.html
 
