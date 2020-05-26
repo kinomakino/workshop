@@ -16,6 +16,8 @@ Username : administrador2
          
 12345 tiene este hash: 7A21990FCD3D759941E45C490F143D5F
 
+hashcat64.exe -a 3 -m 1000 hash.txt --force -w3
+
 
 
 
