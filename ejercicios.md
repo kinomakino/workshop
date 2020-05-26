@@ -13,6 +13,8 @@ Username : administrador2
          * NTLM     : 5074a6992c63485460928c1c9fdad6b5
          * Username : administrador2
          * Password : Patatasfritas2020!!!
+         
+12345 tiene este hash: 7A21990FCD3D759941E45C490F143D5F
 
 
 
