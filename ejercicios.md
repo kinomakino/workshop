@@ -18,6 +18,8 @@ Username : administrador2
 
 hashcat64.exe -a 3 -m 1000 hash.txt --force -w3
 
+EXTRA: hacerlo contra una diccionario.
+
 
 
 
